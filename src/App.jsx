@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import { UserProvider } from './context/UserContext'
 import Login from './views/Login'
@@ -11,14 +11,16 @@ export default function App() {
     <UserProvider>
       <BuildProvider>
         <Header />
-        <Switch>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <PrivateRoute path='/'>
-            <Home />
-          </PrivateRoute>
-        </Switch>
+        <Router>
+          <Switch>
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <PrivateRoute path='/'>
+              <Home />
+            </PrivateRoute>
+          </Switch>
+        </Router>
       </BuildProvider>
     </UserProvider>
   );

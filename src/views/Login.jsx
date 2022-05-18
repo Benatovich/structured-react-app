@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Redirect, useHistory } from 'react-router-dom'
-import { useUser } from '../context/UserContext'
-import { signInUser, signUpUser } from '../services/user'
+import { useUser } from '../hooks/user'
+import { signInUser, signUpUser } from '../services/users'
 
 const Login = () => {
     const history = useHistory()

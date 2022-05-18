@@ -8,7 +8,7 @@ export default function ViewBuilds() {
   
   return (
     <div className={styles.viewBuilds}>
-      <h1>ELDEN THINGS</h1>
+      <h1>Build List:</h1>
 
       <Link to="/builds/add">
         <button>Add a New Build</button>

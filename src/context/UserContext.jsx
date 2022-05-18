@@ -3,17 +3,20 @@ import {
     createContext, useContext,
     useEffect, useMemo, useState
 } from 'react';
-import { getUser } from '../services/user'
+import { getUser } from '../services/users'
 
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-    const [user, setUser] = useState({ id: null, email: null })
+    const currentUser = getUser();
+
+    const [user, setUser] = useState(
+        currentUser ? { id: currentUser.id, email: currentUser.email } : {}
+    );
 
     const value = useMemo(() => ({ user, setUser }), [user.id, user.email])
 
     useEffect(() => {
-        const currentUser = getUser();
         if (currentUser) setUser(currentUser)
     }, [])
 
@@ -25,15 +28,6 @@ const UserProvider = ({ children }) => {
     )
 }
 
-// use a custom hook to expose context state for reading/writing
-const useUser = () => {
-    const context = useContext(UserContext)
 
-    if (context === undefined) {
-        throw new Error('useUser must be used within a UserProvider')
-    }
 
-    return context
-}
-
-export { UserProvider, useUser }
+export { UserProvider }

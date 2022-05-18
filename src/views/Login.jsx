@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import { Redirect, useHistory } from 'react-router-dom'
 import { useUser } from '../hooks/user'
 import { signInUser, signUpUser } from '../services/users'
@@ -43,13 +44,13 @@ const Login = () => {
                         {isSigningUp ? 'Sign up' : 'Sign in'}
                     </h2>
                     <p>
-                        Or
+                        Or 
                         <a
                             href='#'
                             className='signup toggle'
                             onClick={toggleIsSigningUp}
                         >
-                            {' '}
+                            {''}
                             {isSigningUp ? 'sign into your account' : 'sign up for an account'}
                         </a>
                     </p>

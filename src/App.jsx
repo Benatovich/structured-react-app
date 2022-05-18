@@ -4,19 +4,22 @@ import { UserProvider } from './context/UserContext'
 import Login from './views/Login'
 import PrivateRoute from './components/PrivateRoute'
 import Home from './views/Home'
+import { BuildProvider } from './context/BuildContext'
 
 export default function App() {
   return (
     <UserProvider>
-      <Header />
-      <Switch>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <PrivateRoute path='/'>
-          <Home />
-        </PrivateRoute>
-      </Switch>
+      <BuildProvider>
+        <Header />
+        <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <PrivateRoute path='/'>
+            <Home />
+          </PrivateRoute>
+        </Switch>
+      </BuildProvider>
     </UserProvider>
   );
 }

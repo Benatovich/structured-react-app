@@ -1,8 +1,9 @@
 import { useState } from 'react'
-
-import { Redirect, useHistory } from 'react-router-dom'
-import { useUser } from '../hooks/user'
+import { Redirect, useHistory, Link } from 'react-router-dom'
+import { useUser, useAuth } from '../hooks/user'
 import { signInUser, signUpUser } from '../services/users'
+
+import styles from './Login.css'
 
 const Login = () => {
     const history = useHistory()
@@ -43,15 +44,13 @@ const Login = () => {
                     <h2>
                         {isSigningUp ? 'Sign up' : 'Sign in'}
                     </h2>
-                    <p>
-                        Or 
+                    <p> 
                         <a
                             href='#'
                             className='signup toggle'
                             onClick={toggleIsSigningUp}
                         >
-                            {''}
-                            {isSigningUp ? 'sign into your account' : 'sign up for an account'}
+                            {isSigningUp ? 'Or sign into your account' : 'Or sign up for an account'}
                         </a>
                     </p>
                 </div>

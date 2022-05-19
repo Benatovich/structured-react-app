@@ -12,14 +12,6 @@ export default function Home() {
           Build List
         </Link>
       </div>
-      <div>
-        {isLoggedIn ? (
-          <Link to="/profile">View your profile</Link>
-        ) : (
-            <Link to="/login">AL;GFNHEA;OSGVNAER;OIUFGHN</Link>
-        )}
-      </div>
-
     </main>
   )
 }

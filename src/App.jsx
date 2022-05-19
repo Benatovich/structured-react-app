@@ -28,9 +28,9 @@ export default function App() {
                 <Route path='/login'>
                   <Login />
                 </Route>
-                <Route path='/register'>
+                {/* <Route path='/register'>
                   <Login isSigningUp />
-                </Route>
+                </Route> */}
                 <PrivateRoute exact={true} path='/builds'>
                   <ViewBuilds />
                 </PrivateRoute>

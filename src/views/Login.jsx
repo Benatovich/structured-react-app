@@ -91,6 +91,11 @@ const Login = () => {
                             {error}
                         </p>
                         <p> 
+                        {/* {isSigningUp ? (
+                            <Link to="/register" onClick={toggleIsSigningUp} > Or sign up instead</Link>
+                        ) : (
+                            <Link to="/login" onClick={toggleIsSigningUp}>Or sign in instead</Link>
+                        )} */}
                             <a
                                 href='#'
                                 className='signup toggle'

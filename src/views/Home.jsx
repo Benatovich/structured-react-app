@@ -16,11 +16,7 @@ export default function Home() {
         {isLoggedIn ? (
           <Link to="/profile">View your profile</Link>
         ) : (
-          <>
-            <Link to="/register">Create Account</Link>
-            {' or ' /* done using a "portal" to keep spacing intact */}
-            <Link to="/login">Sign In</Link>
-          </>
+            <Link to="/login">AL;GFNHEA;OSGVNAER;OIUFGHN</Link>
         )}
       </div>
 

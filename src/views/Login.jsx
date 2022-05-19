@@ -44,15 +44,6 @@ const Login = () => {
                     <h2>
                         {isSigningUp ? 'Sign up' : 'Sign in'}
                     </h2>
-                    <p> 
-                        <a
-                            href='#'
-                            className='signup toggle'
-                            onClick={toggleIsSigningUp}
-                        >
-                            {isSigningUp ? 'Or sign into your account' : 'Or sign up for an account'}
-                        </a>
-                    </p>
                 </div>
 
                 <form className='auth form' onSubmit={handleSubmit}>
@@ -99,6 +90,16 @@ const Login = () => {
                         <p>
                             {error}
                         </p>
+                        <p> 
+                            <a
+                                href='#'
+                                className='signup toggle'
+                                onClick={toggleIsSigningUp}
+                            >
+                                {isSigningUp ? 'Or sign into your account' : 'Or sign up for an account'}
+                            </a>
+                        </p>
+
                     </div>
                 </form>
             </div>

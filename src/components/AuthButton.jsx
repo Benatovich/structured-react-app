@@ -11,13 +11,11 @@ export default function AuthButton({ className }) {
                 Sign Out
             </button>
         ) : (
-            <>
-                {/* <Link to='/login' className={className}>
-                    <button>
-                        Sign In
-                    </button>
-                </Link> */}
-            </>
+            <Link to='/login' className={className}>
+                <button>
+                    Sign In
+                </button>
+            </Link>
         )}
     </>
   )

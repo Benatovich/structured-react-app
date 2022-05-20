@@ -30,10 +30,16 @@ export default function ViewBuild() {
       <div className='buttons-container'>
         {isOwner ? 
           <>
+          <Link to={`/builds/${id}/edit`}>
             <button>Edit Build</button>
+          </Link>
             <button>Delete Build</button>
           </>
-          : <button>Copy Build</button>
+          : (
+            <Link to={`/builds/${id}/copy`}>
+              <button>Copy Build</button>
+            </Link>
+          )
         }
       </div>
 

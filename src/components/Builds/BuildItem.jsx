@@ -20,7 +20,7 @@ export default function BuildItem({ build }) {
       {/* <span >{date.toLocaleDateString()}</span> */}
       <span>{level}</span>
       
-      <Link to={`/builds/${id}`}>
+      <Link to={`/builds/${build.id}`}>
         {name}
       </Link>
 
@@ -28,7 +28,7 @@ export default function BuildItem({ build }) {
 
 
       <span>
-        <Link to={`/builds/${id}/${action}`}>
+        <Link to={`/builds/${build.id}/${action}`}>
           {action}
         </Link>
       </span>

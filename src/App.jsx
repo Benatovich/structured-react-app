@@ -29,12 +29,11 @@ export default function App() {
                 <Route path='/login'>
                   <Login />
                 </Route>
-                {/* <Route path='/register'>
-                  <Login isSigningUp />
-                </Route> */}
+
                 <PrivateRoute exact={true} path='/builds'>
                   <ViewBuilds />
                 </PrivateRoute>
+
                 <PrivateRoute exact={true} path='/builds/add'>
                   <AddBuild />
                 </PrivateRoute>
@@ -42,12 +41,15 @@ export default function App() {
                 <PrivateRoute exact={true} path='/builds/:id/edit'>
                   <EditBuild />
                 </PrivateRoute>
+
                 <PrivateRoute exact={true} path='/builds/:id/copy'>
                   <CopyBuild />
                 </PrivateRoute>
+
                 <PrivateRoute path='/builds/:id'>
                   <ViewBuild />
                 </PrivateRoute>
+                
                 <Route path='/'>
                   <Redirect to='/builds' />
                 </Route>

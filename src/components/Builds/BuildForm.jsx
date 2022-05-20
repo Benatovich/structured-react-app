@@ -40,6 +40,17 @@ export default function BuildForm({
         </section>
 
         <section className={styles.formSection}>
+          <label htmlFor="name">Level:</label>
+          <input
+            id="level"
+            name="level"
+            type="number"
+            value={formState.level}
+            onChange={handleChange}
+          />
+        </section>
+
+        <section className={styles.formSection}>
           <label htmlFor="name">Summary:</label>
           <textarea
             id="summary"
@@ -50,6 +61,17 @@ export default function BuildForm({
             rows={3}
           />
         </section>
+        {/* <section className={styles.formSection}>
+          <label htmlFor="name">Summary:</label>
+          <textarea
+            id="summary"
+            name="summary"
+            type="text"
+            value={formState.summary}
+            onChange={handleChange}
+            rows={3}
+          />
+        </section> */}
        
         <button type="submit" disabled={saving}>
           {saving ? 'Saving...' : 'Save'}

@@ -1,28 +1,26 @@
 .buildForm {
+    fieldset {
       display: grid;
       grid-gap: 30px 0;
-      /* background-color: aquamarine; */
-}
+    }
   
-form {
-    display: grid;
-    gap: 1rem;
-    border: 2px solid black;
-    /* border: 2px solid var(--tertiary); */
-    width: 400px;
-    padding: 10px 20px 20px;
-    /* background-color: bisque; */
-}
-
-.formsection {
-    display: grid;
-    gap: 0.25rem;
-    background-color: aqua;
-}
-
-input, textarea {
-    padding: 7px 10px;
-    border: 1px solid var(--primary);
-    font-size: 1.1rem;
-    font-family: var(--font-regular);
-}
+    form {
+      display: grid;
+      gap: 1rem;
+      border: 2px solid black;
+      width: 400px;
+      padding: 10px 20px 20px;
+    }
+    
+    section {
+      display: grid;
+      gap: 0.25rem;
+    }
+    
+    input, textarea {
+      padding: 7px 10px;
+      border: 1px solid black;
+      font-size: 1.1rem;
+      font-family: serif;
+    }
+  }

@@ -38,14 +38,15 @@ export default function App() {
                 <PrivateRoute exact={true} path='/builds/add'>
                   <AddBuild />
                 </PrivateRoute>
-                <PrivateRoute path='/builds/:id'>
-                  <ViewBuild />
-                </PrivateRoute>
+
                 <PrivateRoute exact={true} path='/builds/:id/edit'>
                   <EditBuild />
                 </PrivateRoute>
                 <PrivateRoute exact={true} path='/builds/:id/copy'>
                   <CopyBuild />
+                </PrivateRoute>
+                <PrivateRoute path='/builds/:id'>
+                  <ViewBuild />
                 </PrivateRoute>
                 <Route path='/'>
                   <Redirect to='/builds' />

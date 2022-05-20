@@ -40,14 +40,14 @@ export default function BuildForm({
         </section>
 
         <section className={styles.formSection}>
-          <label htmlFor="name">Summary</label>
+          <label htmlFor="name">Summary:</label>
           <textarea
             id="summary"
             name="summary"
             type="text"
             value={formState.summary}
             onChange={handleChange}
-            rows={10}
+            rows={3}
           />
         </section>
        

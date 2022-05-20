@@ -52,3 +52,13 @@ export async function createBuild(build) {
 
     return parseData(request);
 }
+
+export async function getBuild(id) {
+    const request = await client
+        .from('builds')
+        // .select('*')
+        .match({ id })
+        .single()
+
+    return parseData(request)
+}

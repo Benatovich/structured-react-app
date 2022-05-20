@@ -85,45 +85,45 @@ export function useBuild(id) {
     load();
   }, [id]);
 
-  // const remove = async () => {
-  //   if (!build) return;
+  const remove = async () => {
+    if (!build) return;
     
-  //   try {
-  //     const payload = await removeBuild(build.id);
-  //     setBuild(null);
-  //     if (builds) dispatch({ type: 'delete', payload });
-  //     toast.success(`Your build "${build.name}" has been deleted`);
-  //     return payload;
-  //   }
-  //   catch (error) {
-  //     toast.error(error.message)
-  //     throw error
-  //   }
-  // };
+    try {
+      const payload = await removeBuild(build.id);
+      setBuild(null);
+      if (builds) dispatch({ type: 'delete', payload });
+      toast.success(`Your build "${build.name}" has been deleted`);
+      return payload;
+    }
+    catch (error) {
+      toast.error(error.message)
+      throw error
+    }
+  };
 
-  // const update = async (edits) => {
-  //   if (!build) return;
+  const update = async (edits) => {
+    if (!build) return;
 
-  //   try {
-  //     const updated = await updateBuild({
-  //       ...build,
-  //       ...edits
-  //     });
-  //     const payload = {
-  //       ...updated,
-  //       user: user.email
-  //     };
+    try {
+      const updated = await updateBuild({
+        ...build,
+        ...edits
+      });
+      const payload = {
+        ...updated,
+        user: user.email
+      };
 
-  //     setBuild(payload);
-  //     if (builds) dispatch({ type: 'update', payload });
-  //     toast.success(`Updated build "${build.name}"`);
-  //     return payload;
-  //   }
-  //   catch (error) {
-  //     toast.error(error.message);
-  //     throw error;
-  //   }
-  // };
+      setBuild(payload);
+      if (builds) dispatch({ type: 'update', payload });
+      toast.success(`Updated build "${build.name}"`);
+      return payload;
+    }
+    catch (error) {
+      toast.error(error.message);
+      throw error;
+    }
+  };
 
-  return { build };
+  return { build, remove, update };
 }

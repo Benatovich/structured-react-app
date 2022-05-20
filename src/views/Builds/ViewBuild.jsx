@@ -33,7 +33,7 @@ export default function ViewBuild() {
           <Link to={`/builds/${id}/edit`}>
             <button>Edit Build</button>
           </Link>
-            <button>Delete Build</button>
+            <button onClick={handleDelete}>Delete Build</button>
           </>
           : (
             <Link to={`/builds/${id}/copy`}>

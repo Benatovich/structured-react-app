@@ -62,3 +62,24 @@ export async function getBuild(id) {
 
     return parseData(request)
 }
+
+export async function updateBuild(build) {
+    const request = await client
+      .from('builds')
+      .update(mapTo(build))
+      .match({ id: build.id })
+      .single();
+  
+    return parseData(request);
+  }
+
+  export async function removeBuild(id) {
+    const request = await client
+      .from('builds')
+      .delete()
+      .match({ id })
+      .single();
+  
+    return parseData(request);
+  }
+  

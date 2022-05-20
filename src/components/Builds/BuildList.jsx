@@ -8,14 +8,15 @@ export default function BuildList({ builds }) {
   return (
     <ul className={styles.buildList}>
       <li className={styles.header}>
-        <span>Date</span>
+        {/* <span>Date</span> */}
         <span>Title</span>
         <span>Owner</span>
+        <span>Action</span>
+        {/* <span></span> */}
         {/* <span>Name</span>
         <span>Level</span>
         <span>Primary Stats</span> */}
         {/* <span>Secondary Stats</span> */}
-        <span></span>
       </li>
 
       {builds.map(build => {

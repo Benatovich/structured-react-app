@@ -17,7 +17,7 @@ export default function BuildItem({ build }) {
 
   return (
     <li className={styles.buildItem}>
-      <span>{date.toLocaleDateString()}</span>
+      {/* <span >{date.toLocaleDateString()}</span> */}
       
       <Link to={`/builds/${id}`}>
         {name}

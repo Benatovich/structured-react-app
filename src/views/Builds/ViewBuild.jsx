@@ -13,7 +13,7 @@ export default function ViewBuild() {
 
   if(!build) return null
 
-  const isOwner = user.id === build.userId
+  const isOwner = user.id === build.user_id
 
   const handleDelete = async () => {
     if(!confirm('Are you sure you want to delete?')) return

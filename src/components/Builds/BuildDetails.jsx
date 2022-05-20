@@ -17,7 +17,8 @@ export default function BuildDetails({ build, isOwner }) {
       <hr/>
       <ul>
         {/* map through arrays instead of listing manually */}
-        <li>Weapons: {weapons[0]}, {weapons[1]}</li>
+        {/* <li>Weapons: {weapons[0]}, {weapons[1]}</li> */}
+        <li>Weapons: {weapons}</li>
         <hr/>
         {/* <li>Shields: {shields}</li>
         <hr/>

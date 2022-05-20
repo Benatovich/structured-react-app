@@ -9,8 +9,8 @@ export default function BuildList({ builds }) {
     <ul className={styles.buildList}>
       <li className={styles.header}>
         {/* <span>Date</span> */}
-        <span>Title</span>
-        <span>Owner</span>
+        <span>Level</span>
+        <span>Name</span>
         <span>Action</span>
         {/* <span></span> */}
         {/* <span>Name</span>

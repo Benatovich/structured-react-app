@@ -18,12 +18,14 @@ export default function BuildItem({ build }) {
   return (
     <li className={styles.buildItem}>
       {/* <span >{date.toLocaleDateString()}</span> */}
+      <span>{level}</span>
       
       <Link to={`/builds/${id}`}>
         {name}
       </Link>
 
-      <span>{isOwner ? 'you' : 'someone else'}</span>
+      {/* <span>{isOwner ? 'you' : 'someone else'}</span> */}
+
 
       <span>
         <Link to={`/builds/${id}/${action}`}>

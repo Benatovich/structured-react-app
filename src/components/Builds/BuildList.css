@@ -1,7 +1,7 @@
 .buildList {
     display: grid;
     padding: 0;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: max-content min-content max-content;
     grid-gap: 15px 35px;
 }
 

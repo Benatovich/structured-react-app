@@ -62,7 +62,6 @@ export function useBuildCount() {
 
 export function useBuild(id) {
   const context = useContext(BuildContext);
-  const { profile } = useUser();
 
   if (context === undefined) {
     throw new Error('useBuild must be used within a BuildProvider')
@@ -126,5 +125,5 @@ export function useBuild(id) {
   //   }
   // };
 
-  return { build, remove, update };
+  return { build };
 }

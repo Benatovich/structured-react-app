@@ -56,7 +56,7 @@ export async function createBuild(build) {
 export async function getBuild(id) {
     const request = await client
         .from('builds')
-        // .select('*')
+        .select('*')
         .match({ id })
         .single()
 

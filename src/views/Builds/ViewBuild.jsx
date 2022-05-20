@@ -21,8 +21,26 @@ export default function ViewBuild() {
     history.replace('/builds')
   };
 
-
   return (
-    <div>ViewBuild</div>
+    <div className={styles.ViewBuild}>
+      <Link to='/builds'>
+        Return to build list
+      </Link>
+
+      <div className='buttons-container'>
+        {isOwner ? 
+          <>
+            <button>Edit Build</button>
+            <button>Delete Build</button>
+          </>
+          : <button>Copy Build</button>
+        }
+      </div>
+
+      <BuildDetails
+        build={build}
+        isOwner={isOwner}
+      />
+    </div>
   )
 }

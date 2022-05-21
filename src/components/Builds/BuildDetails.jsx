@@ -12,7 +12,7 @@ export default function BuildDetails({ build, isOwner }) {
 
   return (
     <div>
-      <h2>{name} (level {level})</h2>
+      <h2>{name} {level ? `(Level: ${level})` : null}</h2>
       <p>{summary}</p>
       <hr/>
       <ul>
@@ -30,10 +30,10 @@ export default function BuildDetails({ build, isOwner }) {
         <hr/>
         <li>spells: {spells}</li>
         <hr/> */}
-        <li>Primary Stats: {primaryStats}</li>
+        {/* <li>Primary Stats: {primaryStats}</li>
         <hr/>
         <li>secondary Stats: {secondaryStats}</li>
-        <hr/>
+        <hr/> */}
       </ul>
     </div>
   )

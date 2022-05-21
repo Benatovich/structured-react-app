@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './BuildDetails.css'
 
 export default function BuildDetails({ build, isOwner }) {
   const { id, name, level, summary,
@@ -11,9 +12,9 @@ export default function BuildDetails({ build, isOwner }) {
     const date = new Date(created).toLocaleDateString();
 
   return (
-    <div>
+    <div className={styles.BuildDetails}>
       <h2>{name} {level ? `(Level: ${level})` : null}</h2>
-      <p>{summary}</p>
+      <p>Description: {summary}</p>
       <hr/>
       <ul>
         {/* map through arrays instead of listing manually */}

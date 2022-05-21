@@ -66,7 +66,7 @@ export async function getBuild(id) {
 export async function updateBuild(build) {
     const request = await client
       .from('builds')
-      .update(mapTo(build))
+      .update(build)
       .match({ id: build.id })
       .single();
   

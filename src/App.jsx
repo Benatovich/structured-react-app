@@ -46,11 +46,11 @@ export default function App() {
                   <CopyBuild />
                 </PrivateRoute>
 
-                <PrivateRoute path='/builds/:id'>
+                <PrivateRoute exact path='/builds/:id'>
                   <ViewBuild />
                 </PrivateRoute>
-                
-                <Route path='/'>
+
+                <Route exact={true} path='/'>
                   <Redirect to='/builds' />
                 </Route>
               </Switch>

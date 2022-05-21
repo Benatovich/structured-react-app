@@ -61,15 +61,15 @@ export default function BuildForm({
             rows={3}
           />
         </section>
+
         {/* <section className={styles.formSection}>
-          <label htmlFor="name">Summary:</label>
-          <textarea
-            id="summary"
-            name="summary"
+          <label htmlFor="name">Weapons:</label>
+          <input
+            id="weapons"
+            name="weapons"
             type="text"
-            value={formState.summary}
+            value={formState.weapons}
             onChange={handleChange}
-            rows={3}
           />
         </section> */}
        

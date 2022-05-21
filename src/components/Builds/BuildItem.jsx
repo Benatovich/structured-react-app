@@ -11,7 +11,7 @@ export default function BuildItem({ build }) {
     secondaryStats, minStr, 
     minDex, minInt, minFaith, 
     minArc, created, userId } = build;
-  const isOwner = user.id === userId;
+  const isOwner = user.id === build.userId;
   const date = new Date(created);
   const action = isOwner ? 'edit' : 'copy';
 

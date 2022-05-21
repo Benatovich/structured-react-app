@@ -11,13 +11,13 @@ export default function EditBuild() {
 
   if(!build) return null;
 
-  const isOwner = user.id === build.userId;
+  const isOwner = user.id === build.user_id;
   const detailUrl = `/builds/${build.id}`;
 
-  // if(!isOwner) {
-  //   history.replace(detailUrl);
-  //   return null;
-  // }
+  if(!isOwner) {
+    history.replace(detailUrl);
+    return null;
+  }
 
   const handleSubmit = async (edited) => {
     await update(edited);

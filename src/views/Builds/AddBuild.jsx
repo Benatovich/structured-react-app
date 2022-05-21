@@ -9,7 +9,7 @@ export default function AddBuild() {
     const handleSubmit = async build => {
         await add(build);
         history.replace('/builds');
-        history.replace('/builds');
+        location.reload('');
     };
 
     return (
